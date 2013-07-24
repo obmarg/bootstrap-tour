@@ -207,7 +207,7 @@
       return unless step
 
       # If onShow returns a promise, lets wait until it's done to execute
-      promise = @_makePromise (step.onShow(@) if step.onShow?)
+      promise = @_makePromise (step.onShow(@, i) if step.onShow?)
 
       showStepHelper = (e) =>
         @setCurrentStep(i)
